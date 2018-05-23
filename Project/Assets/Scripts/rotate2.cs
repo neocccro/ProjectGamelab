@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour {
+public class rotate2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,6 +11,6 @@ public class test : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		game
+		
 	}
 }
