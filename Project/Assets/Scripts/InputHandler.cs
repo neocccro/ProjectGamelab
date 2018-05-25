@@ -9,17 +9,17 @@ public class InputHandler : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, 100))
             print("yolo");
-         for (var i = 0; i < Input.touchCount; ++i)
+        for (var i = 0; i < Input.touchCount; ++i)
+        {
+            if (Input.GetTouch(i).phase == TouchPhase.Began)
             {
-              if (Input.GetTouch(i).phase == TouchPhase.Began)
-              {            
-                    ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
-                    if (Physics.Raycast(ray))
-                    {
-                        transform.Rotate(Vector3.up /8, Space.World);
-                    }
-   
-              }
-         }
+                ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
+                if (Physics.Raycast(ray))
+                {
+                    transform.Rotate(Vector3.up / 8, Space.World);
+                }
+
+            }
+        }
     }
 }
