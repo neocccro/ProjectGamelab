@@ -3,13 +3,19 @@ using System.Collections;
 
 public class InputHandler : MonoBehaviour
 {
-    public float speed = 0.1F;
     void Update()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-            transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
+            
+            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            
+            Plane plane = new Plane(Vector3.up, transform.position);
+            float distance = 0; 
+            if (plane.Raycast(ray, out distance))
+            { 
+                Vector3 pos = ray.GetPoint(distance); 
+            }
         }
     }
 }
