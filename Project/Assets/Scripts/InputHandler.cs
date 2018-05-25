@@ -3,24 +3,13 @@ using System.Collections;
 
 public class InputHandler : MonoBehaviour
 {
-    private Ray m_Ray;
-    private RaycastHit m_RayCastHit;
-    private Vector3 touchedFinger; 
-    
-
+    public float speed = 0.1F;
     void Update()
     {
-         for (var i = 0; i < Input.touchCount; ++i)
-            {
-              if (Input.GetTouch(i).phase == TouchPhase.Began)
-              {            
-                    Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
-                    if (Physics.Raycast(ray))
-                    {
-                        Debug.Log("touchie");
-                    }
-   
-              }
-         }
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        {
+            Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+            transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
+        }
     }
 }
