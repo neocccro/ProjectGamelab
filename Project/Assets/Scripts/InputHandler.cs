@@ -3,9 +3,29 @@ using System.Collections;
 
 public class InputHandler : MonoBehaviour
 {
-    /*
-    void start() { print("entro"); }
+    public SelectableObjectContainer container;
+
+    public enum InputType
+    {
+        Mouse,
+        Touch
+    }
+    public InputType inputType;
+
     void Update()
+    {
+        switch(inputType)
+        {
+            case InputType.Mouse:
+                HandleMouseInput();
+                break;
+            case InputType.Touch:
+                HandleTouchInput();
+                break;
+        }
+    }
+
+    private void HandleTouchInput()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, 100))
@@ -17,32 +37,24 @@ public class InputHandler : MonoBehaviour
                 ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
                 if (Physics.Raycast(ray))
                 {
-                    transform.Rotate(Vector3.up / 8, Space.World);
+                    Debug.Log("dead");
                 }
 
             }
         }
     }
-    */
-    private void checkTouch(Vector3 pos)
-    {
-        Vector3 wp = Camera.main.ScreenToWorldPoint(pos);
-        Vector2 touchPos = new Vector2(wp.x, wp.y);
-        Collider2D hit = Physics2D.OverlapPoint(touchPos);
 
-        if (hit && hit == gameObject.GetComponent<Collider2D>())
-        {
-            Destroy(hit.gameObject);
-        }
-    }
-
-    void Update()
+    private void HandleMouseInput()
     {
-        if (Input.touchCount > 0 && Input.touchCount < 2)
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                checkTouch(Input.GetTouch(0).position);
+                var data = container.FindMatchingDataWith(hit.transform.gameObject);
+                print(data.text);
             }
         }
     }
