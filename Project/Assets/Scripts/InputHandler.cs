@@ -4,22 +4,22 @@ using System.Collections;
 public class InputHandler : MonoBehaviour
 {
     public SelectableObjectContainer container;
-
+    /*
     public enum InputType
     {
         Mouse,
         Touch
     }
     public InputType inputType;
-
+    */
     void Update()
     {
-        switch(inputType)
+        switch(SystemInfo.deviceType)
         {
-            case InputType.Mouse:
+            case DeviceType.Desktop:
                 HandleMouseInput();
                 break;
-            case InputType.Touch:
+            case DeviceType.Handheld:
                 HandleTouchInput();
                 break;
         }
@@ -27,14 +27,11 @@ public class InputHandler : MonoBehaviour
 
     private void HandleTouchInput()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, 100))
-            print("yolo");
-        for (var i = 0; i < Input.touchCount; ++i)
+        for (var i = 0; i < Input.touchCount; ++i) // why the for loop, do we need multiple fingers?
         {
             if (Input.GetTouch(i).phase == TouchPhase.Began)
             {
-                ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
                 if (Physics.Raycast(ray))
                 {
                     Debug.Log("dead");
