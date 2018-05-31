@@ -3,7 +3,6 @@ using System.Collections;
 
 public class InputHandler : MonoBehaviour
 {
-    /*
     void start() { print("entro"); }
     void Update()
     {
@@ -17,32 +16,9 @@ public class InputHandler : MonoBehaviour
                 ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
                 if (Physics.Raycast(ray))
                 {
-                    transform.Rotate(Vector3.up / 8, Space.World);
+                    Debug.Log("dead");
                 }
 
-            }
-        }
-    }
-    */
-    private void checkTouch(Vector3 pos)
-    {
-        Vector3 wp = Camera.main.ScreenToWorldPoint(pos);
-        Vector2 touchPos = new Vector2(wp.x, wp.y);
-        Collider2D hit = Physics2D.OverlapPoint(touchPos);
-
-        if (hit && hit == gameObject.GetComponent<Collider2D>())
-        {
-            Destroy(hit.gameObject);
-        }
-    }
-
-    void Update()
-    {
-        if (Input.touchCount > 0 && Input.touchCount < 2)
-        {
-            if (Input.GetTouch(0).phase == TouchPhase.Began)
-            {
-                checkTouch(Input.GetTouch(0).position);
             }
         }
     }
