@@ -5,20 +5,24 @@ using UnityEngine;
 public class rotateAroundObject : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] objects;
+    private List<GameObject> objects;
     private float rotation;
     [SerializeField]
     private float width;
     [SerializeField]
     private float speed;
 
+    private void Awake()
+    {
+        objects = new List<GameObject>();
+    }
     // Update is called once per frame
     void Update()
     {
         rotation += speed;
-        for(int i = 0; i < objects.Length; i++)
+        for(int i = 0; i < objects.Count; i++)
         {
-            objects[i].transform.position = new Vector3(Mathf.Cos(rotation + 2* Mathf.PI / objects.Length * i)*width, 0, Mathf.Sin(rotation + 2 * Mathf.PI / objects.Length * i) * width);
+            objects[i].transform.position = new Vector3(Mathf.Cos(rotation + 2* Mathf.PI / objects.Count * i)*width, 0, Mathf.Sin(rotation + 2 * Mathf.PI / objects.Count * i) * width);
         }
 
 
@@ -30,6 +34,11 @@ public class rotateAroundObject : MonoBehaviour
             // Rotate object using X plane
             rotation += touchDeltaPosition.x/100;
         }
+    }
+
+    public void AddObjectToRotateList(GameObject obj)
+    {
+        objects.Add(obj);
     }
     /*
     private void OnMouseDrag()
