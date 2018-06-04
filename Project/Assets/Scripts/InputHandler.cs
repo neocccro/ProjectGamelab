@@ -3,10 +3,15 @@ using System.Collections;
 
 public class InputHandler : MonoBehaviour
 {
+<<<<<<< HEAD
 
     void start() { print("entro"); }
 
     public SelectableObjectContainer container;
+=======
+    [SerializeField] private SelectableObjectContainer container;
+    [SerializeField] private delegateHandler delegat;
+>>>>>>> 879b9e5e2e0ee58adb9c1f24bc3c2db212e0165c
     /*
     public enum InputType
     {
@@ -15,7 +20,10 @@ public class InputHandler : MonoBehaviour
     }
     public InputType inputType;
     */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 879b9e5e2e0ee58adb9c1f24bc3c2db212e0165c
     void Update()
     {
         switch(SystemInfo.deviceType)
@@ -35,12 +43,7 @@ public class InputHandler : MonoBehaviour
         {
             if (Input.GetTouch(i).phase == TouchPhase.Began)
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
-                if (Physics.Raycast(ray))
-                {
-                    Debug.Log("dead");
-                }
-
+                Click(Input.GetTouch(i).position);
             }
         }
     }
@@ -49,15 +52,26 @@ public class InputHandler : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
-            {
-                var data = container.FindMatchingDataWith(hit.transform.gameObject);
-                print(data.text);
-            }
+            Click(Input.mousePosition);
         }
     }
 
+    private void Click(Vector3 pos)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(pos);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        {
+            var data = container.FindMatchingDataWith(hit.transform.gameObject);
+            print(data);
+            print(data.text);
+            delegat.objectToFront(data.text, data.name);
+        }
+
+    }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 879b9e5e2e0ee58adb9c1f24bc3c2db212e0165c
 }

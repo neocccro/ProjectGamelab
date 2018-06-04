@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1b937e82e72ef4c807e283515b1440, type: 3}
   m_Name: DrawingTableData
   m_EditorClassIdentifier: 
-  name: DrawingTable
+  name: Tekentafel
   gameObject: {fileID: 100000, guid: e0da4793e811e9c419da411c070cf9f0, type: 3}
   text: sfhksfnskjfnsd
