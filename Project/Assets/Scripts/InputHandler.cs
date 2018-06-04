@@ -3,9 +3,9 @@ using System.Collections;
 
 public class InputHandler : MonoBehaviour
 {
-<<<<<<< HEAD
+
     void start() { print("entro"); }
-=======
+
     public SelectableObjectContainer container;
     /*
     public enum InputType
@@ -15,7 +15,7 @@ public class InputHandler : MonoBehaviour
     }
     public InputType inputType;
     */
->>>>>>> 07d7158cf1dda1b873f95d93aa5b290452f9b387
+
     void Update()
     {
         switch(SystemInfo.deviceType)
@@ -44,8 +44,6 @@ public class InputHandler : MonoBehaviour
             }
         }
     }
-<<<<<<< HEAD
-=======
 
     private void HandleMouseInput()
     {
@@ -61,5 +59,5 @@ public class InputHandler : MonoBehaviour
             }
         }
     }
->>>>>>> 07d7158cf1dda1b873f95d93aa5b290452f9b387
+
 }
