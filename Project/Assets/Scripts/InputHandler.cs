@@ -3,15 +3,12 @@ using System.Collections;
 
 public class InputHandler : MonoBehaviour
 {
-<<<<<<< HEAD
-
-    void start() { print("entro"); }
+    void Start() { print("entro"); }
 
     public SelectableObjectContainer container;
-=======
-    [SerializeField] private SelectableObjectContainer container;
-    [SerializeField] private delegateHandler delegat;
->>>>>>> 879b9e5e2e0ee58adb9c1f24bc3c2db212e0165c
+    [SerializeField] private SelectableObjectContainer Container;
+    [SerializeField] private delegateHandler Delegat;
+
     /*
     public enum InputType
     {
@@ -20,10 +17,6 @@ public class InputHandler : MonoBehaviour
     }
     public InputType inputType;
     */
-<<<<<<< HEAD
-
-=======
->>>>>>> 879b9e5e2e0ee58adb9c1f24bc3c2db212e0165c
     void Update()
     {
         switch(SystemInfo.deviceType)
@@ -63,15 +56,12 @@ public class InputHandler : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
-            var data = container.FindMatchingDataWith(hit.transform.gameObject);
+            var data = Container.FindMatchingDataWith(hit.transform.gameObject);
             print(data);
             print(data.text);
-            delegat.objectToFront(hit.transform.gameObject, data);
+            Delegat.objectToFront(hit.transform.gameObject, data);
         }
 
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 879b9e5e2e0ee58adb9c1f24bc3c2db212e0165c
 }
