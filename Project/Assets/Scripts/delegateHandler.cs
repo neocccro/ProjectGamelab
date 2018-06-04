@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class delegateHandler : MonoBehaviour {
 
-    public delegate void ObjectToFront(string text, string title);
+    public delegate void ObjectToFront(GameObject obj, SelectableObjectData data);
     public ObjectToFront objectToFront;
 
     public delegate void ObjectBack();
     public ObjectBack objectBack;
     
-    public Transform startMarker;
+    public Vector3 startMarker;
     public Transform endMarker;
-    public float speed = 1.0F;
+    public float timeNeeded = 1.0F;
     private float startTime;
     private float journeyLength;
 
@@ -21,15 +21,15 @@ public class delegateHandler : MonoBehaviour {
         objectToFront += startMove;
     }
 
-    void startMove(string a, string b)
+    void startMove(GameObject obj, SelectableObjectData data)
     {
+        startMarker = obj.transform.position;
         startTime = Time.time;
-        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+        journeyLength = Vector3.Distance(startMarker, endMarker.position);
     }
     void Update()
     {
-        float distCovered = (Time.time - startTime) * speed;
-        float fracJourney = distCovered / journeyLength;
-        transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
+        float timeCovered = Time.time - startTime;
+        transform.position = Vector3.Lerp(startMarker, endMarker.position, Mathf.Min(timeCovered / timeNeeded, 1.0f));
     }
 }

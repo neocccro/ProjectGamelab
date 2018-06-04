@@ -55,7 +55,7 @@ public class InputHandler : MonoBehaviour
             var data = container.FindMatchingDataWith(hit.transform.gameObject);
             print(data);
             print(data.text);
-            delegat.objectToFront(data.text, data.name);
+            delegat.objectToFront(hit.transform.gameObject, data);
         }
 
     }

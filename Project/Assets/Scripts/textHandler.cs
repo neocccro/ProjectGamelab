@@ -24,11 +24,11 @@ public class textHandler : MonoBehaviour {
 		
 	}
 
-    public void changeText(string text, string title)
+    public void changeText(GameObject obj, SelectableObjectData data)
     {
         EnableCanvas();
-        textBox.text = text;
-        textTitleBox.text = title;
+        textBox.text = data.text;
+        textTitleBox.text = data.name;
     }
 
     void DisableCanvas()
