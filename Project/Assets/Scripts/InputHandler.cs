@@ -3,6 +3,7 @@ using System.Collections;
 
 public class InputHandler : MonoBehaviour
 {
+<<<<<<< HEAD
     void Start() { print("entro"); }
 
     public SelectableObjectContainer container;
@@ -17,6 +18,11 @@ public class InputHandler : MonoBehaviour
     }
     public InputType inputType;
     */
+=======
+    [SerializeField] private SelectableObjectContainer container;
+    [SerializeField] private delegateHandler delegat;
+
+>>>>>>> bcdbc6e285b04eee088bbd47be042f1c3b35a3d6
     void Update()
     {
         switch(SystemInfo.deviceType)
@@ -32,7 +38,7 @@ public class InputHandler : MonoBehaviour
 
     private void HandleTouchInput()
     {
-        for (var i = 0; i < Input.touchCount; ++i) // why the for loop, do we need multiple fingers?
+        for (var i = 0; i < Input.touchCount; ++i)
         {
             if (Input.GetTouch(i).phase == TouchPhase.Began)
             {
@@ -61,7 +67,9 @@ public class InputHandler : MonoBehaviour
             print(data.text);
             Delegat.objectToFront(hit.transform.gameObject, data);
         }
-
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> bcdbc6e285b04eee088bbd47be042f1c3b35a3d6
 }
