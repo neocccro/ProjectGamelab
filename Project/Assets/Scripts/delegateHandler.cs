@@ -9,7 +9,8 @@ public class delegateHandler : MonoBehaviour {
 
     public delegate void ObjectBack();
     public ObjectBack objectBack;
-    
+
+    private GameObject objectToMove;
     public Vector3 startMarker;
     public Transform endMarker;
     public float timeNeeded = 1.0F;
@@ -19,6 +20,7 @@ public class delegateHandler : MonoBehaviour {
     private void Start()
     {
         objectToFront += startMove;
+        endMarker = GameObject.FindGameObjectWithTag("MainCamera").transform;
     }
 
     void startMove(GameObject obj, SelectableObjectData data)
@@ -26,10 +28,18 @@ public class delegateHandler : MonoBehaviour {
         startMarker = obj.transform.position;
         startTime = Time.time;
         journeyLength = Vector3.Distance(startMarker, endMarker.position);
+        objectToMove = obj;
     }
     void Update()
     {
         float timeCovered = Time.time - startTime;
-        transform.position = Vector3.Lerp(startMarker, endMarker.position, Mathf.Min(timeCovered / timeNeeded, 1.0f));
+        //if(timeCovered / timeNeeded > 1)
+        //{
+
+        //}
+        if (objectToMove)
+        {
+            objectToMove.transform.position = Vector3.Lerp(startMarker, endMarker.position, Mathf.Min(timeCovered / timeNeeded / 1.5f, 1.0f / 1.5f));
+        }
     }
 }
