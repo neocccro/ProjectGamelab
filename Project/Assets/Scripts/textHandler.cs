@@ -12,14 +12,11 @@ public class textHandler : MonoBehaviour {
     [SerializeField] private delegateHandler delegat;
 
 
-    // Use this for initialization
     void Start ()
     {
         delegat.objectToFront += changeText;
         delegat.objectBack += DisableCanvas;
     }
-	
-	// Update is called once per frame
 	void Update () {
 		
 	}

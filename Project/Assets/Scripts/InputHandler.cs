@@ -3,9 +3,20 @@ using System.Collections;
 
 public class InputHandler : MonoBehaviour
 {
-    [SerializeField] private SelectableObjectContainer container;
-    [SerializeField] private delegateHandler delegat;
+    void Start() { print("entro"); }
 
+    public SelectableObjectContainer container;
+    [SerializeField] private SelectableObjectContainer Container;
+    [SerializeField] private delegateHandler Delegat;
+
+    /*
+    public enum InputType
+    {
+        Mouse,
+        Touch
+    }
+    public InputType inputType;
+    */
     void Update()
     {
         switch(SystemInfo.deviceType)
@@ -45,10 +56,10 @@ public class InputHandler : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
-            var data = container.FindMatchingDataWith(hit.transform.gameObject);
+            var data = Container.FindMatchingDataWith(hit.transform.gameObject);
             print(data);
             print(data.text);
-            delegat.objectToFront(hit.transform.gameObject, data);
+            Delegat.objectToFront(hit.transform.gameObject, data);
         }
     }
 }
