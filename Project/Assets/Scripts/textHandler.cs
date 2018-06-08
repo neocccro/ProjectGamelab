@@ -9,6 +9,7 @@ public class textHandler : MonoBehaviour {
     [SerializeField] private Text textBox;
     [SerializeField] private Text textTitleBox;
     [SerializeField] private GameObject textPanel;
+    [SerializeField] private Button button;
     [SerializeField] private delegateHandler delegat;
 
 
@@ -21,7 +22,7 @@ public class textHandler : MonoBehaviour {
 		
 	}
 
-    public void changeText(GameObject obj, SelectableObjectData data)
+    public void changeText(SelectableObjectData data)
     {
         EnableCanvas();
         textBox.text = data.text;
@@ -33,6 +34,7 @@ public class textHandler : MonoBehaviour {
         textBox.gameObject.SetActive(false);
         textTitleBox.gameObject.SetActive(false);
         textPanel.SetActive(false);
+        button.gameObject.SetActive(false);
     }
 
     void EnableCanvas()
@@ -40,6 +42,7 @@ public class textHandler : MonoBehaviour {
         textBox.gameObject.SetActive(true);
         textTitleBox.gameObject.SetActive(true);
         textPanel.SetActive(true);
+        button.gameObject.SetActive(true);
     }
 
 

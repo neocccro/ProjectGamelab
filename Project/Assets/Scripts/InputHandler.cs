@@ -3,20 +3,9 @@ using System.Collections;
 
 public class InputHandler : MonoBehaviour
 {
-    void Start() { print("entro"); }
-
-    public SelectableObjectContainer container;
     [SerializeField] private SelectableObjectContainer Container;
     [SerializeField] private delegateHandler Delegat;
-
-    /*
-    public enum InputType
-    {
-        Mouse,
-        Touch
-    }
-    public InputType inputType;
-    */
+    
     void Update()
     {
         switch(SystemInfo.deviceType)
@@ -59,7 +48,7 @@ public class InputHandler : MonoBehaviour
             var data = Container.FindMatchingDataWith(hit.transform.gameObject);
             print(data);
             print(data.text);
-            Delegat.objectToFront(hit.transform.gameObject, data);
+            Delegat.objectToFront(data);
         }
     }
 }

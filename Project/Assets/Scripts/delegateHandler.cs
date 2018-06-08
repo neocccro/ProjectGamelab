@@ -4,42 +4,58 @@ using UnityEngine;
 
 public class delegateHandler : MonoBehaviour {
 
-    public delegate void ObjectToFront(GameObject obj, SelectableObjectData data);
+    public delegate void ObjectToFront(SelectableObjectData data);
     public ObjectToFront objectToFront;
 
     public delegate void ObjectBack();
     public ObjectBack objectBack;
 
     private GameObject objectToMove;
-    public Vector3 startMarker;
     public Transform endMarker;
-    public float timeNeeded = 1.0F;
-    private float startTime;
-    private float journeyLength;
+    public Transform origin;
 
     private void Start()
     {
         objectToFront += startMove;
+        objectBack += killAllChildren;
+        objectToFront += DisableWheel;
+        objectBack += EnableWheel;
         endMarker = GameObject.FindGameObjectWithTag("MainCamera").transform;
     }
 
-    void startMove(GameObject obj, SelectableObjectData data)
+    void startMove(SelectableObjectData data)
     {
-        startMarker = obj.transform.position;
-        startTime = Time.time;
-        journeyLength = Vector3.Distance(startMarker, endMarker.position);
-        objectToMove = obj;
+        GameObject egh = Instantiate(data.gameObject, endMarker);
+        egh.transform.parent = endMarker;
+        egh.AddComponent<rotateObject>();
     }
-    void Update()
-    {
-        float timeCovered = Time.time - startTime;
-        //if(timeCovered / timeNeeded > 1)
-        //{
 
-        //}
-        if (objectToMove)
+    public void backButton()
+    {
+        objectBack();
+    }
+
+    public void killAllChildren()
+    {
+        foreach (Transform child in endMarker)
         {
-            objectToMove.transform.position = Vector3.Lerp(startMarker, endMarker.position, Mathf.Min(timeCovered / timeNeeded / 1.5f, 1.0f / 1.5f));
+            Destroy(child.gameObject);
+        }
+    }
+
+    void DisableWheel(SelectableObjectData data)
+    {
+        foreach (Transform child in origin)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
+
+    void EnableWheel()
+    {
+        foreach (Transform child in origin)
+        {
+            child.gameObject.SetActive(true);
         }
     }
 }
