@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: ec8799927f08ad34a868e7f89be43b20
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SF Old Republic
+  fontNames:
+  - SF Old Republic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 22294ad1a71124f48bd9dfc8d16566fb, type: 3}
+  - {fileID: 12800000, guid: 02025a9745a4c6c44b1e7cb024203fa7, type: 3}
+  - {fileID: 12800000, guid: b0ce982bca03b5e4ba9b7afa1dcb9291, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
