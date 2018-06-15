@@ -8,4 +8,5 @@ public class SelectableObjectData : ScriptableObject
     public string name;
     public GameObject gameObject;
     public string text;
+    public Font font;
 }

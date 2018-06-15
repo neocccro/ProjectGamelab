@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class rotateObject : MonoBehaviour
 {
-
-    float rotationSpeed = 20;
-    private void OnMouseDrag()
+    private void Update()
     {
-        float rotX = Input.GetAxis("Mouse X") * rotationSpeed * Mathf.Deg2Rad;
-        float rotY = Input.GetAxis("Mouse Y") * rotationSpeed * Mathf.Deg2Rad;
-
-       transform.RotateAround(Vector3.up, -rotX);
-       transform.RotateAround(Vector3.right, rotY);
+        for (var i = 0; i < Input.touchCount; ++i)
+        {
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+            {
+                // Get movement of the finger since last frame
+                Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+                transform.Rotate(Vector3.up, -touchDeltaPosition.x / 2);
+            }
+        }
     }
-
 }
 

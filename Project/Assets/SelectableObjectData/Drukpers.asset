@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: Drukpers
   m_EditorClassIdentifier: 
   name: Drukpers
-  gameObject: {fileID: 100000, guid: 250b20f47d1d5d44dac7804e806847ab, type: 3}
-  text: dahdjfsdlfsdf
+  gameObject: {fileID: 1597678925083982, guid: 4cc28b2008d9a35418c4be3ba6775f5c, type: 2}
+  text: Een drukpers is een werktuig dat gebruikt werd om teksten en afbeeldingen
+    te vermenigvuldigen. Door middel van het aanbrengen van inkt op een stencil van
+    gravuren Dit exemplaar wordt met de hand bedient.

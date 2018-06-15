@@ -24,9 +24,15 @@ public class SelectableObjectContainer : MonoBehaviour
         var col = obj.AddComponent<SphereCollider>();
 
         obj.name = data.name;
-        col.radius = 0.02f;
+        col.radius = 2.0f;
         obj.transform.SetParent(transform);
         obj.transform.localScale = Vector3.one;
+
+        if(data.name == "Krant")
+        {
+            obj.transform.localScale = new Vector3(4,4,4);
+            col.radius = 0.5f;
+        }
 
         rotator.AddObjectToRotateList(obj);
     }
