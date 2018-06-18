@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: Krant
   m_EditorClassIdentifier: 
   name: Krant
-  gameObject: {fileID: 1864546056148146, guid: 859fed0c0bfb5514fbd171b5ca51125b, type: 2}
+  gameObject: {fileID: 100000, guid: a37d63fe7e166f54da4c35972d3a4f87, type: 3}
   text: Informatie werd door dit medium beschikbaar voor iedereen. Nieuws verspreide
     zich ontzettend snel. De krant was een van de belangrijkste eenzijdige communicatie
     middelen geworden.
+  font: {fileID: 0}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Wacom tablet & pen
   m_EditorClassIdentifier: 
   name: Wacom tablet & pen
-  gameObject: {fileID: 1471388046281128, guid: 855a86d9a15bea14fad88d4168f893b5, type: 2}
+  gameObject: {fileID: 100018, guid: 384f82464d345d14fafa54f00bcd9368, type: 3}
   text: 'Met dit apparaat werd het mogelijk om te kunnen tekenen via de computer.  Met
     behulp van software zoals Photoshop kwam het medium digital art op. '
+  font: {fileID: 0}
