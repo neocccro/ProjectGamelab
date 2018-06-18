@@ -45,17 +45,11 @@ public class delegateHandler : MonoBehaviour {
 
     void DisableWheel(SelectableObjectData data)
     {
-        foreach (Transform child in origin)
-        {
-            child.gameObject.SetActive(false);
-        }
+        origin.gameObject.SetActive(false);
     }
 
     void EnableWheel()
     {
-        foreach (Transform child in origin)
-        {
-            child.gameObject.SetActive(true);
-        }
+        origin.gameObject.SetActive(true);
     }
 }

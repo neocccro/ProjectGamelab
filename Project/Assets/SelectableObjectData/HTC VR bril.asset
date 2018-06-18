@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: HTC VR bril
   m_EditorClassIdentifier: 
   name: HTC VR bril
-  gameObject: {fileID: 1161577214359304, guid: 94666cd025fbbe34bbadedf07c5d5db1, type: 2}
+  gameObject: {fileID: 1042854175054934, guid: f51743c15619fe84eb1654b74abbf58f, type: 2}
   text: ugh voorbeeld texskt
+  font: {fileID: 0}
