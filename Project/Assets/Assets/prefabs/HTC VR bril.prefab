@@ -36,13 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1042854175054934}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD:Project/Assets/Assets (Remco Remerij)/Asset prefabs/HTC VR bril.prefab
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
-=======
-  m_LocalPosition: {x: -29.121319, y: -70.5742, z: -31.074621}
   m_LocalScale: {x: 1, y: 1, z: 1}
->>>>>>> da7a0ba82a1e8c1f7d8a96c7b44add6234479d3b:Project/Assets/Assets/prefabs/HTC VR bril.prefab
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,6 +55,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: d08fc4ad33585f44f9bd0828efbaf8f9, type: 2}
   m_StaticBatchInfo:
@@ -105,3 +101,4 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
