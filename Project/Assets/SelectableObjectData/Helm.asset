@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: Helm
   m_EditorClassIdentifier: 
   name: Helm
-  gameObject: {fileID: 100000, guid: 19c40e1981d164f48886f8cb73dc5deb, type: 3}
+  gameObject: {fileID: 1549614564534418, guid: 9b69057326a9e2945b303b8fb9c552d1, type: 2}
   text: ksljawtoi435i38o7
+  font: {fileID: 0}

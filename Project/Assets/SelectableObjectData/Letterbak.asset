@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: Letterbak
   m_EditorClassIdentifier: 
   name: Letterbak
-  gameObject: {fileID: 100068, guid: b0ded37409f7ece4d9862731e517d3e3, type: 3}
+  gameObject: {fileID: 0}
   text: 69
+  font: {fileID: 0}

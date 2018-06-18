@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: PC
   m_EditorClassIdentifier: 
   name: PC
-  gameObject: {fileID: 1594151982907838, guid: a8347bc08fc3aed4890c9f6aec532e13, type: 2}
+  gameObject: {fileID: 1445285418777628, guid: 9c09054f3cb5d3c40b886c0838661102, type: 2}
   text: "Een van de eerste computers beschikbaar voor de massa. Met deze nieuwe machine
     werd het mogelijk om zware berekeningen veel sneller en effici\xEBnter uit te
     voeren.  Computers waren vanaf toen een must have in de media industrie voor het
     cre\xEBren en renderen van werk."
+  font: {fileID: 0}
