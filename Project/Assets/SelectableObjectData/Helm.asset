@@ -14,4 +14,5 @@ MonoBehaviour:
   name: Helm
   gameObject: {fileID: 1549614564534418, guid: 9b69057326a9e2945b303b8fb9c552d1, type: 2}
   text: ksljawtoi435i38o7
-  font: {fileID: 0}
+  size: 10
+  rotation: 0

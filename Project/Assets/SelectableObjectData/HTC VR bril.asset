@@ -14,4 +14,5 @@ MonoBehaviour:
   name: HTC VR bril
   gameObject: {fileID: 1042854175054934, guid: f51743c15619fe84eb1654b74abbf58f, type: 2}
   text: ugh voorbeeld texskt
-  font: {fileID: 0}
+  size: 1
+  rotation: 90

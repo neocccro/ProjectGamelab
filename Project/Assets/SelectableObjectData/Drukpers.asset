@@ -16,4 +16,5 @@ MonoBehaviour:
   text: Een drukpers is een werktuig dat gebruikt werd om teksten en afbeeldingen
     te vermenigvuldigen. Door middel van het aanbrengen van inkt op een stencil van
     gravuren Dit exemplaar wordt met de hand bedient.
-  font: {fileID: 0}
+  size: 10
+  rotation: 0

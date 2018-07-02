@@ -11,6 +11,7 @@ public class textHandler : MonoBehaviour {
     [SerializeField] private GameObject textPanel;
     [SerializeField] private Button button;
     [SerializeField] private delegateHandler delegat;
+    [SerializeField] private SelectableObjectContainer selectableObjectContainer;
 
 
     void Start ()
@@ -22,9 +23,10 @@ public class textHandler : MonoBehaviour {
 		
 	}
 
-    public void changeText(SelectableObjectData data)
+    public void changeText(GameObject gameObject)
     {
         EnableCanvas();
+        SelectableObjectData data = selectableObjectContainer.FindMatchingDataWith(gameObject);
         textBox.text = data.text;
         textTitleBox.text = data.name;
     }

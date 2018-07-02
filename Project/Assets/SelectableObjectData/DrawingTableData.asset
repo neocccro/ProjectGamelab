@@ -16,4 +16,5 @@ MonoBehaviour:
   text: 'Met dit object Kon er heel gemakkelijk in een hoek van 45 graden gewerkt
     worden in plaats van plat.  Dit is veel gezonder dan voorovergebogen te werken.
     Dit was een onmisbaar ding in bijna elke werkomgeving. '
-  font: {fileID: 0}
+  size: 7
+  rotation: 90

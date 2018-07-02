@@ -46,9 +46,12 @@ public class InputHandler : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
             var data = Container.FindMatchingDataWith(hit.transform.gameObject);
-            print(data);
-            print(data.text);
-            Delegat.objectToFront(data);
+            if(data)
+            {
+                print(data);
+                print(data.text);
+                Delegat.objectToFront(hit.transform.gameObject);
+            }
         }
     }
 }

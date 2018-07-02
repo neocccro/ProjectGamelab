@@ -16,4 +16,5 @@ MonoBehaviour:
   text: Informatie werd door dit medium beschikbaar voor iedereen. Nieuws verspreide
     zich ontzettend snel. De krant was een van de belangrijkste eenzijdige communicatie
     middelen geworden.
-  font: {fileID: 0}
+  size: 25
+  rotation: 180

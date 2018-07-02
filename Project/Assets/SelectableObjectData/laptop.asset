@@ -9,9 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d1b937e82e72ef4c807e283515b1440, type: 3}
-  m_Name: Letterbak
+  m_Name: laptop
   m_EditorClassIdentifier: 
-  name: Letterbak
-  gameObject: {fileID: 0}
-  text: 69
-  font: {fileID: 0}
+  name: laptop
+  gameObject: {fileID: 1445285418777628, guid: 9c09054f3cb5d3c40b886c0838661102, type: 2}
+  text: 
+  size: 1
+  rotation: 90
