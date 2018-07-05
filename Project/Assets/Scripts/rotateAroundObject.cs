@@ -11,6 +11,8 @@ public class rotateAroundObject : MonoBehaviour
     private float width;
     [SerializeField]
     private float speed;
+    [SerializeField]
+    private SelectableObjectContainer selectableObjectContainer;
 
     private void Awake()
     {
@@ -22,7 +24,9 @@ public class rotateAroundObject : MonoBehaviour
         rotation += speed;
         for(int i = 0; i < objects.Count; i++)
         {
-            objects[i].transform.position = new Vector3(Mathf.Cos(rotation + 2* Mathf.PI / objects.Count * i)*width, 0, Mathf.Sin(rotation + 2 * Mathf.PI / objects.Count * i) * width);
+            Vector3 tmp = new Vector3(Mathf.Cos(rotation + 2 * Mathf.PI / objects.Count * i) * width, 0, Mathf.Sin(rotation + 2 * Mathf.PI / objects.Count * i) * width);
+            objects[i].transform.position = tmp * transform.localScale.x;
+            objects[i].transform.eulerAngles = new Vector3(0, -rotation * 180 / Mathf.PI + selectableObjectContainer.FindMatchingDataWith(objects[i]).rotation - 360 / objects.Count * i, 0);
         }
 
 

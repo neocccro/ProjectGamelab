@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: Camera
   m_EditorClassIdentifier: 
   name: Camera
-  gameObject: {fileID: 100000, guid: f9cfad9dd7d14484186de43485f4d5b8, type: 3}
+  gameObject: {fileID: 100000, guid: af5a7000f1613774087420bfa8d930b9, type: 3}
   text: Dit is een zin over een camera.
+  size: 15
+  rotation: 90

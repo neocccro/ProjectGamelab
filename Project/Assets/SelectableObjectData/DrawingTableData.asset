@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Name: DrawingTableData
   m_EditorClassIdentifier: 
   name: Tekentafel
-  gameObject: {fileID: 1627428780441578, guid: ee315225bc7d57e48b818f83ac67a563, type: 2}
+  gameObject: {fileID: 100014, guid: a053a1bba45628c42ad76523ec74b572, type: 3}
   text: 'Met dit object Kon er heel gemakkelijk in een hoek van 45 graden gewerkt
     worden in plaats van plat.  Dit is veel gezonder dan voorovergebogen te werken.
     Dit was een onmisbaar ding in bijna elke werkomgeving. '
+  size: 7
+  rotation: 90

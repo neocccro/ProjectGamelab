@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Name: Lithograpy press
   m_EditorClassIdentifier: 
   name: Lithograpy press
-  gameObject: {fileID: 1195228829476696, guid: fe9316287452b9b42934f0049dc0b397, type: 2}
+  gameObject: {fileID: 100144, guid: 0edf34321cc6b40439fe9f39a5fcc3aa, type: 3}
   text: Een lithograaf is een werktuig dat gebruikt werd om teksten en afbeeldingen
     te vermenigvuldigen. Door middel van het aanbrengen van inkt op een voorbewerkte
     steen. Dit exemplaar wordt met de hand bedient.
+  size: 10
+  rotation: 0

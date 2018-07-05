@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: Typemachine
   m_EditorClassIdentifier: 
   name: Typemachine
-  gameObject: {fileID: 100112, guid: a7735b22d8645104898dbe24828dd7d5, type: 3}
+  gameObject: {fileID: 100118, guid: c4a517bc260b97a4f9f2bd41985829a1, type: 3}
   text: jacco stelde een vraag terwijl ik dit invulde
+  size: 10
+  rotation: 90
