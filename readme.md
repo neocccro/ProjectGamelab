@@ -1,10 +1,10 @@
 # Speciale Input - Output
 Team #
-1. <coen>
-2. <nick>
-3. <volken>
+1. [coen](http://21886.hosts.ma-cloud.nl/portfolio/)
+2. nick
+3. volken
 
-[Projectmanagment]() <Trello scrumboard bijvoorbeeld>
+[Projectmanagment](https://trello.com/b/vx4UnbyC/ar-opdracht) <Trello scrumboard bijvoorbeeld>
 
 ## Ontwerp
 Beschrijf hier kort jullie project
